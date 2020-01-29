@@ -19,6 +19,7 @@
 
 .panel {
   flex: 0 0 25%;
+  color: #2c4b94;
   /* &__notification {
     font-size: .8rem;
     height: 1.75rem;
@@ -40,7 +41,105 @@
   }
 }
 
+.panel__button {
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  background-color: rgb(223, 133, 167);
+}
+
 .cart {
   font-size: 1.7rem;
   font-weight: bold;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 98;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.full-height {
+  height: 100%;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  width: 100%;
+  max-width: 400px;
+  background-color: #FFF;
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.modal h1 {
+  color: #222;
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.modal p {
+  color: #666;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.fade-two-enter-active,
+.fade-two-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-two-enter,
+.fade-two-leave-to {
+  opacity: 0;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform .5s;
+}
+
+.slide-enter,
+.slide-leave-to {
+  transform: translateY(-50%) translateX(100vw);
+}
+
+.input {
+  -webkit-appearance: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 4px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+.modal__header {
+  margin-bottom: 2rem;
+}
+
+.modal__lable {
+  font-size: 1.5rem;
+}
+
+.modal__button {
+  margin-top: 3rem;
+  width: 12rem;
+  margin-right: 1rem;
 }

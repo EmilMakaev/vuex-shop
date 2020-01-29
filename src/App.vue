@@ -10,6 +10,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  data () {
+    return {
+      showModal: true
+    }
+  }
+}
+</script>
+
 <style lang="scss">
 @import '@/styles/global.scss';
 </style>

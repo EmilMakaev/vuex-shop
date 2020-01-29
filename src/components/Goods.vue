@@ -34,7 +34,8 @@ export default {
     }),
     ...mapGetters({
       total: 'cartTotal',
-      productIsInStock: 'productIsInStock'
+      productIsInStock: 'productIsInStock',
+      cartFromProducts: 'cartProducts',
     })
   },
   methods: {
@@ -44,7 +45,29 @@ export default {
     })
   },
   created () {
-    this.fetchProducts()
-  }
+    this.fetchProducts();
+    /* if (localStorage.getItem('cartInLocalStorage')) {
+        this.$store.state.cart = JSON.parse(localStorage.getItem('cartInLocalStorage'));
+      } else {
+        localStorage.removeItem('cartInLocalStorage');
+        this.fetchProducts();
+      } */
+    }
+
+
+    /* if (localStorage.getItem('cartInLocalStorage')) {
+      try {
+        this.$store.getters.availableProducts = JSON.parse(localStorage.getItem('cartInLocalStorage'));
+      } catch (e) {
+        // localStorage.removeItem('cartInLocalStorage');
+        // this.fetchProducts();
+      }
+    }
+    console.log(this.$store.getters.availableProducts);
+    console.log(this.$store.getters.cartProducts);
+    }
+    */
+    
+  
 }
 </script>

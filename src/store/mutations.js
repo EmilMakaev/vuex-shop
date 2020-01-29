@@ -5,11 +5,17 @@ export default {
   pushProductToCart(state, productId) {
     state.cart.push({
       id: productId,
-      quantity: 1
+      quantity: 1,
     });
+
+    /* const parsed = JSON.stringify(state.cart);
+    localStorage.setItem('cartInLocalStorage', parsed); */
   },
   incrementItemQuantity(state, cartItem) {
     cartItem.quantity++;
+
+    /* const parsed = JSON.stringify(state.cart);
+    localStorage.setItem('state.cart', parsed); */
   },
   decrementProductInventory(state, product) {
     product.inventory--;

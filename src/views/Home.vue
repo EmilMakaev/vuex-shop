@@ -15,6 +15,11 @@ export default {
   components: {
     Footer,
     Goods
+  },
+  data() {
+    return {
+      showModal: true
+    }
   }
 }
 </script>
